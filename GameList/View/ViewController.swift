@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+
 import Alamofire
 import SwiftyJSON
 import Kingfisher
@@ -17,7 +19,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     private var filteredGameList : [Game]? = nil
     private var currentGameList : [Game]? = nil
     private var searching = false
-    private var timer = Timer()
     private var counter = 0
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var sliderColletionView: UICollectionView!
@@ -34,8 +35,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         searchBar.delegate = self
         Webservice().fetchGames { (game) in
         
-            print(game?.results as Any)
-            self.gameListViewModel = GameListViewModel(gameList: game!.results)
+            self.gameListViewModel = GameListViewModel(gameList: game?.results)
             self.currentGameList = self.gameListViewModel.gameList
             DispatchQueue.main.async{ [self] in
                 self.tableView.reloadData()
@@ -116,7 +116,7 @@ extension ViewController: UISearchBarDelegate{
         }else
         {
             sliderColletionView.isHidden = true
-            currentGameList = gameListViewModel.gameList.filter({ (Game) -> Bool in
+            currentGameList = gameListViewModel.gameList?.filter({ (Game) -> Bool in
                 return (Game.name?.lowercased().contains(searchText.lowercased()))!
             })
             if currentGameList?.count == 0{
