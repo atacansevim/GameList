@@ -81,7 +81,6 @@
 		7B9AB8A625F1454500DF514C /* GameListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9AB8AA25F1454500DF514C /* GameListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListUITests.swift; sourceTree = "<group>"; };
 		7B9AB8AC25F1454500DF514C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BBA05AA25F1A1E500D02B19 /* artifacts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = artifacts; sourceTree = "<group>"; };
 		7BCF1A2625F51A1C003DCBE2 /* SliderColletionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderColletionViewCell.swift; sourceTree = "<group>"; };
 		7BCF1A3225F566E2003DCBE2 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		7BCF1A3625F56926003DCBE2 /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
@@ -214,7 +213,6 @@
 		7B9AB8C225F1495800DF514C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BBA05AA25F1A1E500D02B19 /* artifacts */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
